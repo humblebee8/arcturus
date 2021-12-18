@@ -17,7 +17,8 @@ const {
 	clean = "true",
 	retain = "false",
 	trigger = "visible",
-	animations = ""
+	animations = "",
+	source
 } = Astro.props;
 const fx = new Fx();
 const t = {
@@ -54,6 +55,7 @@ const animate = (target, fx) => {
 <XElement @is={type}
   style={styleSet}
   class={classList}
+  src={source??null}
   define:vars={
     {
 			animate,
