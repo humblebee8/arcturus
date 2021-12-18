@@ -1,0 +1,49 @@
+---
+	import Shell from "./Shell.astro";
+  import X from "$components/X.astro";
+  const titlePrefix = 'Arcturus';
+  const titleSeparator = ' | ';
+  const {
+    title, 
+    description, 
+    bodyClasses = 'arcturus', 
+    theme,
+  } = Astro.props;
+---
+<Shell 
+  title={titlePrefix + titleSeparator + title}
+  description={description} 
+  bodyClasses={bodyClasses} 
+  theme={theme}
+>
+  <slot name="htmlhead"></slot>
+  <slot name="headerwrapper">
+    <header>
+      <slot name="contentheader">
+        <X
+          type="div"
+          iterations="0"
+          duration="172800"
+          trigger="visibleonce"
+          fullNode="true"
+          easing="linear"
+          direction="normal"
+          animations="transform: [rotate(360deg)]"
+        >
+          <img src="logo.png" alt="site logo" />
+        </X>
+      </slot>
+    </header>
+  </slot>
+  <slot name="mainwrapper">
+    <main>
+      <slot></slot>
+    </main>
+  </slot>
+  <slot name="footerwrapper">
+    <footer>
+      <slot name="contentfooter">
+      </slot>
+    </footer>
+  </slot>
+</Shell>
