@@ -1,6 +1,7 @@
 ---
+  import XElement from 'astro-xelement'
 	import Shell from "./Shell.astro";
-  import X from "$components/X.astro";
+  import X from "../components/x.astro";
   const titlePrefix = 'Arcturus';
   const titleSeparator = ' | ';
   const {
@@ -9,6 +10,7 @@
     bodyClasses = 'arcturus', 
     theme,
   } = Astro.props;
+  const {img:Image}=XElement
 ---
 <Shell 
   title={titlePrefix + titleSeparator + title}
@@ -21,7 +23,7 @@
     <header>
       <slot name="contentheader">
         <X
-          type="div"
+          type="img"
           iterations="0"
           duration="172800"
           trigger="visibleonce"
@@ -29,8 +31,8 @@
           easing="linear"
           direction="normal"
           animations="transform: [rotate(360deg)]"
+          source="logo.png"
         >
-          <img src="logo.png" alt="site logo" />
         </X>
       </slot>
     </header>
