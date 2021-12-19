@@ -1,0 +1,17 @@
+---
+export async function getStaticPaths() {
+  const data = await fetch(
+    `${import.meta.env.PUBLIC_CONTENT_URL}posts/posts.json`
+  ).then((response) => response.json());
+  console.log(data);
+  return data.posts.map((post) => {
+    return {
+      params: { slug: post.slug, category: post.category },
+    };
+  });
+}
+const { slug } = Astro.request.params;
+console.log(slug);
+---
+
+<p>Post: {slug}</p>

@@ -1,6 +1,13 @@
 ---
 import Default from "../layouts/Default.astro";
+import { Markdown } from 'astro/components';
+
+const content = await fetch(
+	`${import.meta.env.PUBLIC_CONTENT_URL}pages/index.md`
+).then(res => res.text());
 ---
 <Default title="welcome to Arcturus" description="Arcturus">
-	<h1>INDEX</h1>
+	<Markdown>
+		{content}
+	</Markdown>
 </Default>

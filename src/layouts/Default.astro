@@ -20,37 +20,36 @@
   <slot name="headerwrapper">
     <header>
       <slot name="contentheader">
-        <div style="text-align: center;">
-          <X
-            type="img"
-            style="width: 250px;"
-            iterations="0"
-            duration="172800"
-            trigger="visibleonce"
-            fullNode="true"
-            easing="linear"
-            direction="normal"
-            animations="transform: [rotate(360deg)]"
-            source="logo.png"
-          >
-          </X>
-          <X
-            type="h1"
-            class="text-light"
-            iterations="0"
-            duration="8640"
-            delayBetween="300"
-            trigger="visibleonce"
-            fullNode="false"
-            easing="linear"
-            direction="alternate"
-            fill="both"
-            clean="true"
-            animations="transform: [scale(1.05), scale(0.95), scale(1.1), scale(0.9)] | color: [#cae1f8, #89b0d6, #cbd7e4, #5298e2, #7ea1c5, #3081d3, #3fa6ff]"
-          >
-            ARCTURUS
-          </X>
-        </div>
+        <X
+          type="img"
+          style="width: 250px;"
+          class="mx-auto"
+          iterations="0"
+          duration="172800"
+          trigger="visibleonce"
+          fullNode="true"
+          easing="linear"
+          direction="normal"
+          animations="transform: [rotate(360deg)]"
+          source="logo.png"
+        >
+        </X>
+        <X
+          type="h1"
+          class="text-center"
+          iterations="0"
+          duration="8640"
+          delayBetween="300"
+          trigger="visibleonce"
+          fullNode="false"
+          easing="linear"
+          direction="alternate"
+          fill="both"
+          clean="true"
+          animations="transform: [scale(1.05), scale(0.95), scale(1.1), scale(0.9)] | color: [#cae1f8, #89b0d6, #cbd7e4, #5298e2, #7ea1c5, #3081d3, #3fa6ff]"
+        >
+          ARCTURUS
+        </X>
       </slot>
     </header>
   </slot>

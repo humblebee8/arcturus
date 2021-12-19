@@ -5,6 +5,7 @@
 
 body {
   opacity: 0;
+  color: #abcdef;
   transition: opacity 1s;
   -webkit-transition: opacity 1s;
   font-family: Arial, Helvetica, sans-serif;
